@@ -7,7 +7,6 @@ class Confirm {
     private confirmText:string = 'I am a JS Confirm'
     private resultText: string = 'You clicked: Ok'
 
-
     confirmAlert(){
         cy.get(this.confirmBtn).click();
         cy.on("window:alert", (text) => {
