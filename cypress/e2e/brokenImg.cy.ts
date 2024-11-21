@@ -17,4 +17,16 @@ describe('BROKEN IMAGE', () => {
             expect(img.naturalWidth,'Img Width: ').to.eq(0)
         })
     });
+
+    
+    it.only('Verify proper img', () => {
+        cy.get('div.example img')
+        .last()
+        .should('be.visible')
+        .and((el)=>{
+            img = el[0] as HTMLImageElement
+            expect(img.naturalHeight,'Img Height: ').to.eq(160)
+            expect(img.naturalWidth,'Img Width: ').to.eq(160)
+        })
+    });
 });
