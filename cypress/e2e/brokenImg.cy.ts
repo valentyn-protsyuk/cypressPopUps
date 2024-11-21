@@ -1,6 +1,10 @@
 import {BrokenImagePage} from "../../pages/BrokenImg"
+
+let img: HTMLImageElement
+
 describe('BROKEN IMAGE', () => {
-    it('', () => {
-        
+    beforeEach(() => {
+        cy.visit('/broken_images'); 
     });
+    
 });
